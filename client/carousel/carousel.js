@@ -1,0 +1,8 @@
+Template.carousel.rendered=function(){
+       !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+}
