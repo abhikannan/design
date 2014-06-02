@@ -15,19 +15,19 @@ insertData = function(data, collection) {
 };
 
 loadFixtures = function() {
-    var allUsersIds, applications, lastWeek, name, now, user, userinfo, userinfos, users, _i, _id, _j, _len, _len1;
+    var allUsersIds, applications, lastWeek, name, now, user, userinfo, profiles, users, _i, _id, _j, _len, _len1;
     now = new Date();
     lastWeek = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
     users = {};
-    userinfos = [
+    profiles = [
         {
             name: "Abhilash"
         }, {
             name: "Denis"
         }
     ];
-    for (_i = 0, _len = userinfos.length; _i < _len; _i++) {
-        userinfo = userinfos[_i];
+    for (_i = 0, _len = profiles.length; _i < _len; _i++) {
+        userinfo = profiles[_i];
         name = userinfo.name;
         _id = name.replace(/[^\w]/g, "");
         users[_id] = {
@@ -65,7 +65,10 @@ loadFixtures = function() {
     applications = {
         JodieFoster: {
             name: "Jodie Foster",
-            email: "jodie@imdb.com"
+            email: "jodie@imdb.com",
+            height: "1.61",
+            size: "S",
+            comments: "I need a decent outfit for an Oscar Ceremony red carpet"
         }
     };
     insertData(applications, Applications);

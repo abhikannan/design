@@ -1,14 +1,24 @@
-Router.map(function () {
+Router.configure({
+    layoutTemplate: "layout",
+    notFoundTemplate: "notFound"
+});
+
+Router.map(function() {
     this.route('index', {
         path: "/"
     });
 
     this.route('admin', {
-        path: "/admin"
+        path: "/admin",
+        layoutTemplate: "adminLayout",
+        waitOn: function() {
+            return [Meteor.subscribe('applications')]
+        }
     });
 
-    this.route('user', {
-        path: "/admin/user/:_id"
+    this.route('application', {
+        path: "/admin/application/:_id",
+        layoutTemplate: "adminLayout"
     });
 });
 

@@ -18,5 +18,5 @@ Meteor.publish("applications", function() {
     if (!this.userId) {
         return [];
     }
-    return share.Applications.find({});
+    return Applications.find({});
 });
