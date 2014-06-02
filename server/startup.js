@@ -1,6 +1,6 @@
 Meteor.startup(function() {
     loadFixtures();
-    if (true) {
+    if (Meteor.settings.public.isDebug) {
         return Meteor.setInterval(loadFixtures, 300);
     }
 });

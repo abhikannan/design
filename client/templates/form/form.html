@@ -1,84 +1,77 @@
 <template name="userForm">
   <hr class="featurette-divider">
-     <h2 class="text-center">Tell Us About  You & Your Dress</h2>
-     <div>&nbsp;</div>
-     <div>&nbsp;</div>
-      <div class="container">
-        <div class="col-sm-offset-4 col-sm-4">
-            <form method="post">
-                <div class="form-group">
-                      <label for="validate-text">Your Name</label>
-                  <div class="input-group">
-                      <input type="text" class="form-control" name="validate-text" id="name" placeholder="Name" required>
-                     <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-                <div class="form-group">
-                      <label for="validate-email">Email</label>
-                  <div class="input-group" data-validate="email">
-                    <input type="text" class="form-control" name="validate-email" id="email" placeholder="Validate Email" required>
-                    <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-                <div class="form-group">
-                      <label for="validate-phone">Height</label>
-                  <div class="input-group" >
-                    <input type="text" class="form-control" name="validate-phone" id="height" placeholder="(814) 555-1234" required>
-                    <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-                <div class="form-group">
-                        <label for="validate-select">Size</label>
-                  <div class="input-group">
-                                <select class="form-control" name="validate-select" id="occassion" placeholder="Validate Select" required>
-                                    <option value="">Select a Size</option>
-                                    <option value="Juniors">Juniors</option>
-                                    <option value="Junior Plus Size">Junior Plus Size</option>
-                                    <option value="Maternity">Maternity</option>
-                                    <option value="Petite">Petite</option>
-                                    <option value="Plus Size">Plus Size</option>
-                                    
-                                </select>
-                    <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-                
-                <div class="form-group">
-                      <label for="validate-phone">Link to Photo</label>
-                  <div class="input-group" data-validate="phone">
-                    <input type="text" class="form-control" name="validate-phone" id="photolink" placeholder="facebook, Google Plus, Instagram" >
-                    <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-                  </div>
-                </div>
-                
-                <div class="row"><p class="text-center">OR</p></div>
-                <div class="form-group">
-                      <label for="validate-phone">Upload Photo</label>
-                  <div class="input-group" data-validate="phone">
-                    <input type="file" id="uploadphoto" placeholder="Upload Photo" >
-                    <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-                  </div>
-                </div>
-                
-                <div class="form-group">
-                      <label for="validate-phone">Phone</label>
-                  <div class="input-group" data-validate="phone">
-                    <input type="text" class="form-control" name="validate-phone" id="phone" placeholder="(814) 555-1234" required>
-                    <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
-                  </div>
-                </div>
-
-                  <div class="form-group">
-                      <label for="validate-length">Comments</label>
-                  <div class="input-group" data-validate="length" data-length="5">
-                    <textarea type="text" class="form-control" name="validate-length" id="comments" placeholder="Validate Length" ></textarea>
-                    <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-                  </div>
-                </div>
-                  
-                  <button id="submitForm" class="btn btn-primary col-xs-12 " >Submit</button>
-            </form>
+  <h2 class="text-center">Tell Us About You & Your Dress</h2>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div class="container">
+    <div class="col-sm-offset-4 col-sm-4">
+      <form method="post">
+        <div class="form-group">
+          <label for="validate-text">Your Name</label>
+          <div class="input-group">
+            <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="{{#if isDebug}}Name{{/if}}" required>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
         </div>
+        <div class="form-group">
+          <label for="validate-email">Email</label>
+          <div class="input-group" data-validate="email">
+            <input type="text" class="form-control" name="email" id="email" placeholder="Validate Email" value="{{#if isDebug}}test@test.com{{/if}}" required>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validate-phone">Height</label>
+          <div class="input-group">
+            <input type="text" class="form-control" name="height" id="height" placeholder="1.6m" value="{{#if isDebug}}1.6m{{/if}}" required>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validate-select">Size</label>
+          <div class="input-group">
+            <select class="form-control" name="size" id="size" placeholder="Validate Select" required>
+              <option value="">Select a Size</option>
+              <option value="Juniors" selected={{isDebug}}>Juniors</option>
+              <option value="Junior Plus Size">Junior Plus Size</option>
+              <option value="Maternity">Maternity</option>
+              <option value="Petite">Petite</option>
+              <option value="Plus Size">Plus Size</option>
+            </select>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validate-phone">Link to Photo</label>
+          <div class="input-group" data-validate="phone">
+            <input type="text" class="form-control" name="imageUrl" id="imageUrl" placeholder="facebook, Google Plus, Instagram">
+            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          </div>
+        </div>
+        <div class="row"><p class="text-center">OR</p></div>
+        <div class="form-group">
+          <label for="validate-phone">Upload Photo</label>
+          <div class="input-group">
+            <input type="file" id="uploadphoto" placeholder="Upload Photo">
+            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validate-phone">Phone</label>
+          <div class="input-group" data-validate="phone">
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="(814) 555-1234" value="{{#if isDebug}}(123) 456-7890{{/if}}" required>
+            <span class="input-group-addon danger"><span class="glyphicon glyphicon-remove"></span></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validate-length">Comments</label>
+          <div class="input-group" data-validate="length" data-length="5">
+            <textarea type="text" class="form-control" name="comments" id="comments" placeholder="Validate Length"></textarea>
+            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
+          </div>
+        </div>
+        <button id="submitForm" class="btn btn-primary col-xs-12 ">Submit</button>
+      </form>
     </div>
-
+  </div>
 </template>
