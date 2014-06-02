@@ -1,23 +1,19 @@
 <template name="login">
-  <div class="container">
-    <div class="span4 offset4">
-      <form>
-        <div class="control-group">
-          <div class="controls">
-            <input type="text" placeholder="Email">
+  <div class="container login">
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4">
+        <h2>Please log in to continue:</h2>
+        <form role="form">
+          <div class="form-group">
+            <input class="email form-control input-lg" type="text" placeholder="Email" autofocus="autofocus" required="required" />
           </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <input type="text" placeholder="Password">
+          <div class="form-group">
+            <input class="password form-control input-lg" type="password" placeholder="Password" required="required" />
           </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <button type="submit" class="btn">Login</button>
-          </div>
-        </div>
-      </form>
+          <div class="error-container text-danger pull-left"></div>
+          <button type="submit" class="btn btn-lg btn-primary pull-right">Login</button>
+        </form>
+      </div>
     </div>
   </div>
 </template>
