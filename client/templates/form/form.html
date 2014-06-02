@@ -42,17 +42,10 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="validate-phone">Link to Photo</label>
+          <label for="validate-phone">Photo</label>
           <div class="input-group" data-validate="phone">
-            <input type="text" class="form-control" name="imageUrl" id="imageUrl" placeholder="facebook, Google Plus, Instagram">
-            <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
-          </div>
-        </div>
-        <div class="row"><p class="text-center">OR</p></div>
-        <div class="form-group">
-          <label for="validate-phone">Upload Photo</label>
-          <div class="input-group">
-            <input type="file" id="uploadphoto" placeholder="Upload Photo">
+            <button class="btn btn-primary pick-photo">Pick your photo</button>
+            <input type="hidden" class="form-control image-url" name="imageUrl" id="imageUrl">
             <span class="input-group-addon info"><span class="glyphicon glyphicon-asterisk"></span></span>
           </div>
         </div>

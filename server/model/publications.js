@@ -20,3 +20,10 @@ Meteor.publish("applications", function() {
     }
     return Applications.find({});
 });
+
+Meteor.publish("application", function(_id) {
+    if (!this.userId) {
+        return [];
+    }
+    return Applications.find({_id: _id});
+});

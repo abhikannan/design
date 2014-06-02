@@ -4,7 +4,8 @@
     "basePackages": {
       "bootstrap-3": {},
       "collectionFS": {},
-      "iron-router": {}
+      "iron-router": {},
+      "filepicker-plus": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -21,6 +22,11 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "filepicker-plus": {
+        "git": "https://github.com/nate-strauser/meteor-filepicker-plus.git",
+        "tag": "v1.2.1",
+        "commit": "80b31d01c959b0687d6ff14ece275cfb9f2f63d2"
       },
       "cfs-base-package": {
         "git": "https://github.com/CollectionFS/Meteor-cfs-base-package.git",

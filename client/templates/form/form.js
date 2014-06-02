@@ -48,6 +48,17 @@ Template.userForm.rendered = function() {
 }
 
 Template.userForm.events({
+    'click .pick-photo': function(event) {
+        event.preventDefault();
+        FP.showUpload(function(inkBlobs) {
+            var inkBlob, _i, _len;
+            for (_i = 0, _len = inkBlobs.length; _i < _len; _i++) {
+                inkBlob = inkBlobs[_i];
+                $(".image-url").val(inkBlob.url);
+                $(".pick-photo").text('Picked!');
+            }
+        });
+    },
     'submit form': function(event) {
         event.preventDefault();
 
@@ -58,13 +69,6 @@ Template.userForm.events({
         };
         for (var i = 0; i < values.length; i++) {
             application[values[i].name] = values[i].value
-        }
-        console.log(application)
-
-        var file = $('#uploadphoto').get(0).files[0];
-        if (file) {
-            var image = Images.insert(file);
-            application.imageId = image._id
         }
 
         Applications.insert(application, function(error, result) {

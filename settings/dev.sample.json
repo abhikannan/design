@@ -12,6 +12,9 @@
   },
   "public": {
     "isDebug": true,
+    "filepicker": {
+      "key": ""
+    },
     "facebook": {
       "appId": ""
     },
