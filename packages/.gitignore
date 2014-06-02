@@ -24,3 +24,5 @@
 /cfs-filesystem
 /reactive-property
 /micro-queue
+/iron-router
+/blaze-layout

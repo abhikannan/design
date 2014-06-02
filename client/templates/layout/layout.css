@@ -113,7 +113,7 @@
     -------------------------------------------------- */
 
     /* Center align the text within the three columns below the carousel */
-    .marketing .span4 {
+    .marketing .image-wrapper {
       text-align: center;
     }
     .marketing h2 {

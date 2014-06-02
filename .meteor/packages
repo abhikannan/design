@@ -9,3 +9,6 @@ cfs-filesystem
 collectionFS
 cfs-gridfs
 cfs-ejson-file
+iron-router
+accounts-base
+accounts-password
