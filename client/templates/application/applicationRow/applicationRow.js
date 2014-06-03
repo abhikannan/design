@@ -9,7 +9,7 @@ Template.applicationRow.rendered = function() {
 };
 
 Template.applicationRow.events({
-//  "click .selector": function(event, template) {
-//
-//  }
+  "click .remove": function(event, template) {
+      Applications.remove(template.data._id)
+  }
 });

@@ -7,5 +7,11 @@ Applications.allow({
             return true;
         }
         return false;
+    },
+    remove: function(userId, application) {
+        if (userId) {
+            return true;
+        }
+        return false;
     }
 });
