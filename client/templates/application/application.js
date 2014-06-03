@@ -9,7 +9,9 @@ Template.application.rendered = function() {
 };
 
 Template.application.events({
-//  "click .selector": function(event, template) {
-//
-//  }
+  "input .urls": function(event, template) {
+      var $urls = $(event.currentTarget);
+      var urls = $urls.val();
+      Applications.update(template.data._id, {$set: {urls: urls}});
+  }
 });
