@@ -73,9 +73,9 @@ Template.userForm.events({
 
         Applications.insert(application, function(error, result) {
             if (error) {
-                Session.set('serverDataResponse', "Error:" + error.reason);
+                Meteor._debug(error)
             } else {
-                Session.set('serverDataResponse', result);
+                $("#submitForm").prop("disabled", true).text("Successfully submitted, thank you!")
             }
         });
     }
