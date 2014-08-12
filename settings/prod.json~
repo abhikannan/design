@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://intujob:3000",
+  "baseUrl": "http://designerspick.meteor.com",
   "facebook": {
     "secret": ""
   },
@@ -7,14 +7,12 @@
     "secret": ""
   },
   "apm": {
-    "appId": "__disabled_for_dev__",
-    "secret": "__disabled_for_dev__"
+    "appId": "",
+    "secret": ""
   },
   "public": {
-    "isDebug": true,
-    "filepicker": {
-      "key": ""
-    },
+    "version": "__VERSION__",
+    "isDebug": false,
     "facebook": {
       "appId": ""
     },
@@ -23,11 +21,11 @@
     },
     "googleAnalytics": {
       "property": "",
-      "disabled": true
+      "disabled": false
     },
     "mixpanel": {
       "token": "",
-      "disabled": true
+      "disabled": false
     }
   }
 }
